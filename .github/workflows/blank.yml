@@ -29,6 +29,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build image
-        run: echo "${IMAGE}"
-        env:
-          IMAGE: $MY_NEW_SECRET
+        run: echo "${super_secret}"
+        env: 
+          super_secret: ${{ secrets.MY_NEW_SECRET }}
+        
